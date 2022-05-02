@@ -144,10 +144,14 @@ function draw() {
 		let y = RESOLUTION.y / 2;
 		let label = keys[i];
 		let brightness = keys[i].includes("#") ? 0.3 : 1;
-		if (playingNotes.includes(keys[i])) { brightness *= 2; }
+    let keyHeight = y
+		if (playingNotes.includes(keys[i])) {
+      brightness *= 2;
+      keyHeight *= .9;
+    }
 		stroke(150);
 		fill(brightness * 100,brightness * i * 2,brightness * i * 3);
-		rect(x, y, keySize, y);
+		rect(x, y, keySize, keyHeight);
 		fill(255);
 		stroke(0);
 		push();
