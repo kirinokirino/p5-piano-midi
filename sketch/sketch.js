@@ -28,7 +28,7 @@ let keys = [];
 const offset = 60-36;
 
 function preload() {
-	json = loadJSON("/assets/Ghibli.json");
+	json = loadJSON("assets/Ghibli.json");
 }
 
 function setup() {
